@@ -16,7 +16,7 @@ headers={
 r = s.get("http://114yeah.com/index/sign.html", headers=headers)
 if (r.status_code != 200):
     r.raise_for_status()
-print(s.cookies['PHPSESSID'])
+print(r.headers)
 r = s.post('http://114yeah.com/index/encrypchar.html', data={}, headers=headers)
 if (r.status_code != 200):
     r.raise_for_status()
